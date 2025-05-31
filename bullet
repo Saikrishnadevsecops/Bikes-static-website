@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Bullet - Classic Legend</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1621797380639-9f7963a6e288?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #d4af37;
+        }
+
+        /* Gallery Styles */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .gallery-title h2 {
+            font-size: 2.5rem;
+            color: #222;
+            display: inline-block;
+            background-color: #f8f5f2;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #d4af37;
+            z-index: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .img-overlay {
+            opacity: 1;
+        }
+
+        .img-title {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .img-desc {
+            color: #d4af37;
+            font-size: 0.9rem;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.1s;
+        }
+
+        .gallery-item:hover .img-title,
+        .gallery-item:hover .img-desc {
+            transform: translateY(0);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Royal Enfield Bullet</h1>
+            <p class="tagline">The Classic Legend Since 1932</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <div class="gallery-title">
+                <h2>Iconic Gallery</h2>
+            </div>
+
+            <div class="gallery">
+                <!-- Bullet 1 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Classic" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Bullet 350</h3>
+                        <p class="img-desc">The timeless classic with thumping engine</p>
+                    </div>
+                </div>
+
+                <!-- Bullet 2 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580310614658-fe4e7b7476df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Side View" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Classic Profile</h3>
+                        <p class="img-desc">Iconic silhouette that never goes out of style</p>
+                    </div>
+                </div>
+
+                <!-- Bullet 3 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Engine" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Thumping Heart</h3>
+                        <p class="img-desc">346cc single cylinder, air-cooled engine</p>
+                    </div>
+                </div>
+
+                <!-- Bullet 4 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Custom" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Custom Builds</h3>
+                        <p class="img-desc">Endless customization possibilities</p>
+                    </div>
+                </div>
+
+                <!-- Bullet 5 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558980394-4c7c9299fe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Vintage" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Vintage Charm</h3>
+                        <p class="img-desc">Heritage that spans generations</p>
+                    </div>
+                </div>
+
+                <!-- Bullet 6 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Adventure" class="gallery-img">
+                    <div class="img-overlay">
+                        <h3 class="img-title">Road Companion</h3>
+                        <p class="img-desc">Built for long, memorable journeys</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Royal Enfield</div>
+            <p>The oldest motorcycle brand in continuous production</p>
+            <p class="copyright">© 2023 Royal Enfield Bullet Gallery | All images belong to their respective owners</p>
+        </div>
+    </footer>
+</body>
+</html>
