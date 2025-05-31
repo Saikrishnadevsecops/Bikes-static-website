@@ -3,276 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Enfield Bullet - Classic Legend</title>
+    <title>Royal Enfield Bullet - Specifications</title>
     <style>
         /* Global Styles */
+        :root {
+            --re-black: #1a1a1a;
+            --re-gold: #d4af37;
+            --re-red: #cc0000;
+            --re-white: #f8f8f8;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
-
+        
         body {
-            background-color: #f8f5f2;
-            color: #333;
+            background-color: var(--re-white);
+            color: var(--re-black);
             line-height: 1.6;
         }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1621797380639-9f7963a6e288?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 5rem 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .tagline {
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: #d4af37;
-        }
-
-        /* Gallery Styles */
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .gallery-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .gallery-title h2 {
-            font-size: 2.5rem;
-            color: #222;
-            display: inline-block;
-            background-color: #f8f5f2;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .gallery-title::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: #d4af37;
-            z-index: 0;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            height: 250px;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-
-        .img-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            height: 80vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
         }
-
-        .gallery-item:hover .img-overlay {
-            opacity: 1;
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
         }
-
-        .img-title {
-            color: #fff;
-            font-size: 1.5rem;
+        
+        .hero h1 {
+            font-size: 4rem;
             margin-bottom: 0.5rem;
-            transform: translateY(20px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            color: var(--re-gold);
+        }
+        
+        .re-logo {
+            width: 150px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .specs-section {
+            padding: 5rem 0 3rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--re-black);
+            display: inline-block;
+            padding-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: var(--re-gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Specifications Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .specs-card {
+            background: white;
+            border-radius: 5px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--re-gold);
             transition: transform 0.3s ease;
         }
-
-        .img-desc {
-            color: #d4af37;
-            font-size: 0.9rem;
-            transform: translateY(20px);
-            transition: transform 0.3s ease 0.1s;
+        
+        .specs-card:hover {
+            transform: translateY(-10px);
         }
-
-        .gallery-item:hover .img-title,
-        .gallery-item:hover .img-desc {
-            transform: translateY(0);
+        
+        .specs-card h3 {
+            color: var(--re-black);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
         }
-
-        /* Footer Styles */
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+        
+        .specs-card h3 span {
+            margin-right: 15px;
+            color: var(--re-gold);
+            font-size: 1.8rem;
         }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
+        
+        .spec-item {
             margin-bottom: 1rem;
-            color: #d4af37;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dotted #eee;
         }
-
-        .copyright {
+        
+        .spec-name {
+            font-weight: 500;
+            color: var(--re-black);
+        }
+        
+        .spec-value {
+            color: var(--re-red);
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--re-black);
+            padding: 5rem 0;
+            color: white;
+        }
+        
+        .features .section-title h2 {
+            color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--re-gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-item h3 {
+            color: var(--re-gold);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+        
+        .feature-item p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 2rem;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-size: 0.9rem;
-            opacity: 0.8;
         }
-
-        /* Responsive Styles */
+        
+        .footer-links a:hover {
+            color: var(--re-gold);
+        }
+        
+        .social-links {
+            margin: 2rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--re-gold);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
+            .hero h1 {
+                font-size: 2.8rem;
             }
-
-            .tagline {
-                font-size: 1.1rem;
+            
+            .hero h2 {
+                font-size: 1.4rem;
             }
-
-            .gallery {
-                grid-template-columns: 1fr;
+            
+            .section-title h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Royal Enfield Bullet</h1>
-            <p class="tagline">The Classic Legend Since 1932</p>
+    <!-- Hero Section with Bullet Image -->
+    <section class="hero">
+        <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logo.png" alt="Royal Enfield Logo" class="re-logo">
+        <div class="hero-content">
+            <h1>Bullet 350</h1>
+            <h2>The Legend Continues</h2>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <div class="gallery-container">
-            <div class="gallery-title">
-                <h2>Iconic Gallery</h2>
+    <!-- Main Specifications Section -->
+    <main class="container">
+        <section class="specs-section">
+            <div class="section-title">
+                <h2>Technical Specifications</h2>
             </div>
-
-            <div class="gallery">
-                <!-- Bullet 1 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Classic" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Bullet 350</h3>
-                        <p class="img-desc">The timeless classic with thumping engine</p>
+            
+            <div class="specs-grid">
+                <!-- Engine Specifications -->
+                <div class="specs-card">
+                    <h3><span>⚙️</span> Engine</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Displacement</span>
+                        <span class="spec-value">346 cc</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Engine Type</span>
+                        <span class="spec-value">Single Cylinder, 4-Stroke</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Max Power</span>
+                        <span class="spec-value">19.1 bhp @ 5250 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Max Torque</span>
+                        <span class="spec-value">28 Nm @ 4000 rpm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Cooling System</span>
+                        <span class="spec-value">Air Cooled</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel System</span>
+                        <span class="spec-value">Fuel Injection</span>
                     </div>
                 </div>
-
-                <!-- Bullet 2 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580310614658-fe4e7b7476df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Side View" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Classic Profile</h3>
-                        <p class="img-desc">Iconic silhouette that never goes out of style</p>
+                
+                <!-- Transmission -->
+                <div class="specs-card">
+                    <h3><span>🔧</span> Transmission</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Clutch</span>
+                        <span class="spec-value">Wet Multiplate</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Gearbox</span>
+                        <span class="spec-value">5 Speed Constant Mesh</span>
                     </div>
                 </div>
-
-                <!-- Bullet 3 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Engine" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Thumping Heart</h3>
-                        <p class="img-desc">346cc single cylinder, air-cooled engine</p>
+                
+                <!-- Dimensions -->
+                <div class="specs-card">
+                    <h3><span>📏</span> Dimensions</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Length</span>
+                        <span class="spec-value">2140 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Width</span>
+                        <span class="spec-value">800 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Height</span>
+                        <span class="spec-value">1090 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Wheelbase</span>
+                        <span class="spec-value">1370 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Ground Clearance</span>
+                        <span class="spec-value">135 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Kerb Weight</span>
+                        <span class="spec-value">191 kg</span>
                     </div>
                 </div>
-
-                <!-- Bullet 4 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Custom" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Custom Builds</h3>
-                        <p class="img-desc">Endless customization possibilities</p>
+                
+                <!-- Performance -->
+                <div class="specs-card">
+                    <h3><span>🏁</span> Performance</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Top Speed</span>
+                        <span class="spec-value">110 km/h</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Fuel Capacity</span>
+                        <span class="spec-value">13.5 liters</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Mileage</span>
+                        <span class="spec-value">35-40 kmpl</span>
                     </div>
                 </div>
-
-                <!-- Bullet 5 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558980394-4c7c9299fe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Vintage" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Vintage Charm</h3>
-                        <p class="img-desc">Heritage that spans generations</p>
+                
+                <!-- Brakes & Suspension -->
+                <div class="specs-card">
+                    <h3><span>🛑</span> Brakes & Suspension</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Front Brake</span>
+                        <span class="spec-value">280mm Disc</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Rear Brake</span>
+                        <span class="spec-value">153mm Drum</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Front Suspension</span>
+                        <span class="spec-value">Telescopic Fork</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Rear Suspension</span>
+                        <span class="spec-value">Twin Shock Absorbers</span>
                     </div>
                 </div>
-
-                <!-- Bullet 6 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Royal Enfield Bullet Adventure" class="gallery-img">
-                    <div class="img-overlay">
-                        <h3 class="img-title">Road Companion</h3>
-                        <p class="img-desc">Built for long, memorable journeys</p>
+                
+                <!-- Wheels & Tyres -->
+                <div class="specs-card">
+                    <h3><span>🛞</span> Wheels & Tyres</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Front Tyre</span>
+                        <span class="spec-value">3.25 x 19"</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Rear Tyre</span>
+                        <span class="spec-value">3.25 x 19"</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <!-- Key Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Legendary Features</h2>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🕰️</div>
+                        <h3>Timeless Design</h3>
+                        <p>Classic styling unchanged for decades</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🔊</div>
+                        <h3>Thump</h3>
+                        <p>Signature exhaust note that defines Royal Enfield</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Build Quality</h3>
+                        <p>Robust construction for durability</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🛣️</div>
+                        <h3>Road Presence</h3>
+                        <p>Commanding stance that turns heads</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Royal Enfield</div>
-            <p>The oldest motorcycle brand in continuous production</p>
-            <p class="copyright">© 2023 Royal Enfield Bullet Gallery | All images belong to their respective owners</p>
+        <div class="container">
+            <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logo.png" alt="Royal Enfield Logo" class="footer-logo">
+            <p>Since 1932</p>
+            
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Models</a>
+                <a href="#">Accessories</a>
+                <a href="#">Dealers</a>
+                <a href="#">Test Ride</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="#">📱</a>
+                <a href="#">📘</a>
+                <a href="#">📸</a>
+                <a href="#">🐦</a>
+                <a href="#">▶️</a>
+            </div>
+            
+            <p class="copyright">© 2023 Royal Enfield. All specifications are for Bullet 350 model.</p>
         </div>
     </footer>
 </body>
